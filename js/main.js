@@ -19,12 +19,30 @@ const swiper = new Swiper('.swiper', {
             spaceBetween: 110
         },
         891: {
-          slidesPerView: 2,
-          spaceBetween: 40
+            slidesPerView: 2,
+            spaceBetween: 40
         },
         1200: {
             slidesPerView: 3,
             spaceBetween: 70
-          }
-      }
+        }
+    }
 });
+
+
+const buttonModal = document.querySelector('.main-display__button');
+const modalWindow = document.querySelector('.modal');
+
+buttonModal.addEventListener('click', (e) => {
+    modalWindow.classList.add('active');
+    document.getElementsByTagName('html')[0].style.overflowY = 'hidden';
+
+})
+
+modalWindow.addEventListener('click', (event) => {
+    const target = event.target;
+    if (target.classList.contains('modal')) {
+        modalWindow.classList.remove('active');
+        document.getElementsByTagName('html')[0].style.overflowY = 'auto';
+    }
+})

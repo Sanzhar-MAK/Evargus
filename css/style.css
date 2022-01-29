@@ -13,6 +13,8 @@ html, body{
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     background: #E5E5E5;
+}
+html{
     scroll-behavior: smooth;
 }
 
@@ -183,7 +185,7 @@ h1, h2, h3, h4, h5, h6{
 .about{
     background: url('../img/about-background.svg') no-repeat;
     background-position-y: 19rem;
-    padding-bottom: 24rem
+    padding-bottom: 24rem;
 }
 
 .about__wrap{
@@ -391,3 +393,118 @@ h1, h2, h3, h4, h5, h6{
     line-height: 114%;
 }
 
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    backdrop-filter: blur(50px);
+    z-index: 99;
+    display: none;
+}
+
+.modal__inner{
+    width: 118rem;
+    height: 50rem;
+    text-align: center;
+    margin: auto;
+    background: #fff url('../img/modal-background.svg') no-repeat center;
+    background-size: cover;
+    box-shadow: 0 0 3.5rem rgba(212,20,90,0.25);
+    border-radius: 1.5rem;
+    padding: 4.5rem 21.5rem;
+}
+
+.modal__inner-header{
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 117%;
+    margin-bottom: 3.2rem;
+}
+
+.modal__inner-elements{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.modal__item{
+    width: 75rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal__item-long{
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.modal__message{
+    width: 100%;
+    outline: none;
+    border: .1rem solid #A2A2A2;
+    border-radius: .9rem;
+    resize: none;
+    padding: 1rem 2.1rem;
+    font-size: 1.4rem;
+    line-height: 114%;
+    color: #989898;
+}
+
+.modal__item:first-child{
+    margin-bottom: 1.7rem;
+}
+
+.modal__input{
+    width: 36rem;
+    
+}
+
+.modal__input input{
+    width: 100%;
+    outline: none;
+    font-size: 1.4rem;
+    line-height: 114%;
+    color: #989898;
+    border: 0.1rem solid #A2A2A2;
+    border-radius: 0.9rem;
+    padding: 1.3rem 2.1rem;
+}
+
+.modal__button{
+    max-width: 17rem;
+    font-weight: 300;
+    padding: 0.5rem 2rem;
+    text-transform: lowercase;
+}
+
+.modal__policy{
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    line-height: 115%;
+    color: #989898;
+}
+
+.modal__policy input{
+    margin-right: 1rem;
+}
+
+.modal__policy a{
+    text-decoration: none;
+    color: #989898;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.modal__policy a:hover{
+    border-bottom: 1px solid rgb(54, 52, 52);
+}
+
+.active{
+    display: flex;
+}

@@ -209,6 +209,37 @@
         </div>
 
     </footer>
+
+    <form action="#" class="modal">
+        <div class="modal__inner">
+            <div class="modal__inner-header">ФОРМА ЗАЯВКИ</div>
+            <div class="modal__inner-elements">
+                <div class="modal__item">
+                    <div class="modal__input modal__input-short">
+                        <input type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="modal__input modal__input-short">
+                        <input type="email" placeholder="Ваш e-mail">
+                    </div>
+                </div>
+
+                <div class="modal__item modal__item-long">
+                    <textarea class="modal__message" name="text" id="" cols="30" rows="7"
+                        placeholder="Ваше сообщение (марка автомобиля, цвет ковриков, номер телефона)"></textarea>
+                </div>
+                <div class="modal__policy">
+                    <input type="checkbox" id="modal__check">
+                    <label for="modal__check">
+                        <span>Я соглашаюсь с</span>
+                        <a href="#">Политикой безопасности</a>
+                    </label>
+                </div>
+            </div>
+            <button type="button" class="main-display__button modal__button">Отправить</button>
+
+        </div>
+    </form>
+
     <script src="js/swiper-bundle.js"></script>
     <script src="js/main.js"></script>
 </body>
